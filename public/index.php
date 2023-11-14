@@ -13,6 +13,8 @@ $app->addRoutes([
     ['GET', '/', 'HomeController@index'],
     ['GET', '/books', 'BookController@list'],
     ['GET', '/books/[i:id]', 'BookController@show'],
+    ['GET|POST', '/books/creer', 'BookController@create'], //l'url doit être en post et get car pour l'afficher, on a besoin de get et lors de la requête du create, on utilise un post
+
 ]);
 
 // Lancer l'application
