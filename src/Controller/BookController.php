@@ -18,8 +18,7 @@ class BookController
 
         return View::render('list', [
             'name' => $name,
-            'cars' => [1, 2, 3],
-            'books' => $books,
+            'books' => $books
         ]
     );
     
@@ -35,7 +34,7 @@ class BookController
         }
 
         return View::render('show', [
-            'Book' => $book
+            'book' => $book
     ]);
         //dump($id);
     }
@@ -43,39 +42,40 @@ class BookController
     public function create()
     {
         $book = new Book();
+        $title = 'Nouveau livre';
         
         /* 
         * RÉCUPÉRATION DES DONNÉES
         */
         //On vérifie que y'a qqch dans le champ title et on l'affecte à $titleBook. S'il n'y a rien, on affecte null à la variable
-        $titleBook = $_POST['title'] ?? ''; // ?? '' -> fonctionne que en php 7.0 minimum
+        $book->title = $_POST['title'] ?? ''; // ?? '' -> fonctionne que en php 7.0 minimum
         //$name = isset($_POST['name']) ? $_POST['name'] : null; //même chose que au-dessus mais en php 5
-        $price = $_POST['price'] ?? '';
-        $discount = $_POST['discount'] ?? '';
-        $isbn = $_POST['isbn'] ?? '';
-        $author = $_POST['author'] ?? '';
-        $date = $_POST['published_at'] ?? '';
-        $image = $_POST['image'] ?? '';
+        $book->price = $_POST['price'] ?? '';
+        $book->discount = $_POST['discount'] ?? '';
+        $book->isbn = $_POST['isbn'] ?? '';
+        $book->author = $_POST['author'] ?? '';
+        $book->published_at = $_POST['published_at'] ?? '';
+        $book->image = $_POST['image'] ?? '';
 
         //Préparation du tableau d'erreur
         $errors = [];
 
         if (! empty($_POST)) 
         {
-            if (empty($titleBook)) 
-            {
-                $errors['title'] = 'Le nom est invalide.';
-            }
-            if (empty($errors)) 
-            {
-                $book->save(['title']);
+            // if (empty($book->title)) 
+            // {
+            //     $errors['title'] = 'Le nom est invalide.';
+            // }
+            
+                $book->save(['title', 'price', 'discount', 'isbn', 'author', 'published_at', 'image']);
                 //Dans le save, on met le nom des colonnes de la table
-                //book->save(['title, 'blabla']);
 
                 //@todo : View::redirect('/utilisateurs');
-            }
+            
         }
 
-        return View::render('create');
+        return View::render('create', [
+            'title' => $title
+    ]);
     }
 }

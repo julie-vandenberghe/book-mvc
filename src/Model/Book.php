@@ -24,7 +24,7 @@ class Book extends Model
                 'isbn' => '8248827583739',
                 'author' => 'Denise-Sabine Bernard',
                 'published_at' => '2014-08-18',
-                'image' => 'uploads/06.jpg',
+                'image' => '../uploads/01.jpg',
             ],
             [
                 'id' => 2,
@@ -34,7 +34,7 @@ class Book extends Model
                 'isbn' => '3680780915',
                 'author' => 'Nicolas de la Courtois',
                 'published_at' => '1987-10-22',
-                'image' => 'uploads/05.jpg',
+                'image' => 'uploads/02.jpg',
             ],
             [
                 'id' => 3,
@@ -44,7 +44,7 @@ class Book extends Model
                 'isbn' => '0432990694820',
                 'author' => 'Aimé Martineau',
                 'published_at' => '2008-08-07',
-                'image' => 'uploads/02.jpg',
+                'image' => 'uploads/03.jpg',
             ],
             [
                 'id' => 4,
@@ -54,7 +54,7 @@ class Book extends Model
                 'isbn' => '7445094667310',
                 'author' => 'Arthur Allard',
                 'published_at' => '1991-07-23',
-                'image' => 'uploads/01.jpg',
+                'image' => 'uploads/04.jpg',
             ],
             [
                 'id' => 5,
@@ -64,7 +64,7 @@ class Book extends Model
                 'isbn' => '0857622132295',
                 'author' => 'Alphonse Gros',
                 'published_at' => '1981-10-04',
-                'image' => 'uploads/02.jpg',
+                'image' => 'uploads/05.jpg',
             ],
             [
                 'id' => 6,
@@ -74,7 +74,7 @@ class Book extends Model
                 'isbn' => '9478341825490',
                 'author' => 'Théodore Francois',
                 'published_at' => '2013-02-09',
-                'image' => 'uploads/03.jpg',
+                'image' => 'uploads/06.jpg',
             ],
             [
                 'id' => 7,

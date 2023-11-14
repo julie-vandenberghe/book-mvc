@@ -47,12 +47,11 @@ class Model
         $values = [];
 
         foreach ($fields as $field) {
-            $values[':'.$field] = $this->$field;
+            $values[':' . $field] = $this->$field;
         }
 
         // [':name' => 'Fiorella', ':age' => 3]
         $parameters = implode(', ', array_keys($values)); // [':name', ':age']
-
         $sql = "INSERT INTO $table ($columns) VALUES ($parameters)";
         $query = Database::get()->prepare($sql);
 
