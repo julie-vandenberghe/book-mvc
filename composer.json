@@ -1,0 +1,19 @@
+{
+    "name": "m2i/mvc",
+    "autoload": {
+        "psr-4": {
+            "M2i\\Mvc\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Matthieu Mota",
+            "email": "matthieumota@gmail.com"
+        }
+    ],
+    "require": {
+        "symfony/var-dumper": "^6.3",
+        "filp/whoops": "^2.15",
+        "altorouter/altorouter": "^2.0"
+    }
+}
