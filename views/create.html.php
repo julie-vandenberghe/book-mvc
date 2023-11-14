@@ -1,7 +1,7 @@
 <?php require 'partials/header.html.php'; ?>
     
 <div class="max-w-5xl mx-auto">
-    <h1 class="text-2xl">Créer un nouveau livre</h1>
+    <h1 class="text-2xl text-center font-bold my-10">Créer un nouveau livre</h1>
     <!-- @TO DO GESTION DES ERREURS -->
 
     <form action="" method="post" class="w-1/2 mx-auto" enctype="multipart/form-data">
@@ -34,8 +34,7 @@
                 <input type="file" name="image" id="image" class="cursor-pointer w-full
                     file:rounded-full file:border-0 file:cursor-pointer
                     file:bg-blue-50 hover:file:bg-blue-100
-                    file:font-semibold file:py-2 file:px-4 file:mr-4
-                ">
+                    file:font-semibold file:py-2 file:px-4 file:mr-4">
             </div> -->
 
             <div class="text-center">

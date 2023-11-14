@@ -1,7 +1,10 @@
 <?php require 'partials/header.html.php'; ?>
 
 <div class="max-w-5xl mx-auto">
-    <a href="/books/creer" class="text-blue-400 underline">Créer un nouveau livre</a>
+    
+    <div class="text-center my-10">
+        <a href="/books/creer" class="bg-gray-900 px-4 py-2 text-white inline-block rounded hover:bg-gray-700 duration-200">Créer un nouveau livre</a>
+    </div>
     
     <div class="flex flex-wrap"> 
             <?php foreach ($books as $book){ ?>
