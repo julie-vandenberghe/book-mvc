@@ -8,10 +8,10 @@ class Model
 {
     public static function getTable()
     {
-        $class = static::class; // Nom de la classe: Mvc\Model\User
-        $class = strrchr($class, '\\'); // \User
+        $class = static::class; // Nom de la classe: Mvc\Model\Book
+        $class = strrchr($class, '\\'); // \Book
 
-        return strtolower(substr($class, 1)).'s'; // users
+        return strtolower(substr($class, 1)).'s'; // books
     }
 
     public static function all()

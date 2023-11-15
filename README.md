@@ -41,3 +41,11 @@ php -S 127.0.0.1:8000 -t public
 ```
 Pour info : on ne peut pas le faire sur le port 80 car utilisé par Wamp/Mamp.
 On pourra maintenant aller sur `http://localhost:8000`.
+
+## Fonctionnalités implémentées
+
+- Create : OK ✅
+- Delete : OK ✅
+- Update : in progress 🚧
+- Search : in progress 🚧
+- Filter : not done ❌

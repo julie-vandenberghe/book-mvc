@@ -34,7 +34,6 @@ class BookController
         return View::render('show', [
             'book' => $book
     ]);
-        //dump($id);
     }
 
     public function create()
@@ -60,10 +59,7 @@ class BookController
 
         if (! empty($_POST)) 
         {
-            // if (empty($book->title)) 
-            // {
-            //     $errors['title'] = 'Le nom est invalide.';
-            // }
+            //@todo : Récupérer les images
             
                 $book->save(['title', 'price', 'discount', 'isbn', 'author', 'published_at', 'image']);
                 //Dans le save, on met le nom des colonnes de la table
@@ -75,6 +71,7 @@ class BookController
         return View::render('create', [
             'title' => $title
     ]);
+
     }
 
     public static function delete($id)
