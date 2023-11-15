@@ -39,6 +39,22 @@ class Model
         return $query->fetch();
     }
 
+    public static function delete($id)
+    {
+        $table = static::getTable(); // static:: est $this en static
+        $sql = "DELETE FROM $table WHERE id = :id";
+        $query = Database::get()->prepare($sql);
+        
+        $query->execute(['id' => $id]);
+
+        //Permet de récupérer un tableau d'objets au lieu d'un tableau de tableaux
+        //$query->setFetchMode(\PDO::FETCH_CLASS, static::class);
+
+        return $query->fetch();
+
+    }
+
+
     public function save($fields)
     {
         $table = static::getTable();
@@ -57,4 +73,5 @@ class Model
 
         return $query->execute($values);
     }
+
 }

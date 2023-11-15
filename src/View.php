@@ -19,6 +19,14 @@ class View
 
         require '../views/'.$view.'.html.php';
     }
+
+    public static function redirect($url)
+    {
+        header("Location: $url");
+    }
+
+    //View::redirect('/books');
+
 }
 
 // Sans static

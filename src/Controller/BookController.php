@@ -77,40 +77,14 @@ class BookController
     ]);
     }
 
-    public function delete($id)
-
-// Faire la requête
-// $query = $db->prepare('DELETE FROM contacts WHERE id = :id');
-// $query->execute(['id' => $id]);
-
-// $_SESSION['success'] = "Le contact $id a été supprimé.";
-// header('Location: index.php');
+    public static function delete($id)
     {
-        $book = Book::find($id);
+        $book = Book::delete($id);
 
-        if (! $book) {
-            http_response_code(404);
-            return View::render('404');
-        }
-        
-        
-
-        if (! empty($_POST)) 
-        {
-            // if (empty($book->title)) 
-            // {
-            //     $errors['title'] = 'Le nom est invalide.';
-            // }
-            
-                $book->save(['title', 'price', 'discount', 'isbn', 'author', 'published_at', 'image']);
-                //Dans le save, on met le nom des colonnes de la table
-
-                //@todo : View::redirect('/utilisateurs');
-            
-        }
-
-        return View::render('delete', [
-            'title' => $title
-    ]);
+        return View::redirect('/books');
     }
+
+    
+    
 }
+
