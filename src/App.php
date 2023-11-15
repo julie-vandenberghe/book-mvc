@@ -16,6 +16,9 @@ class App extends AltoRouter
         // Permet de récupérer l'URL actuelle
         $match = $this->match();
 
+        //Permet d'initaliser la session pour récupérer des messages ensuite
+        session_start();
+
         // Lance le contrôleur
         if (is_array($match)) {
             [$controller, $method] = explode('@', $match['target']); // UserController@list

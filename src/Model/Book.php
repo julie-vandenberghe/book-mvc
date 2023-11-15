@@ -2,6 +2,8 @@
 
 namespace M2i\Mvc\Model;
 
+use M2i\Mvc\Database;
+
 class Book extends Model
 {
     public $id;
@@ -146,6 +148,17 @@ class Book extends Model
 
         return $books;
 
+    }
+
+    public static function findByTitleOrISBN($titleOrISBN)
+    {
+        $searchValue = '%' . $titleOrISBN . '%';
+        $table = static::getTable(); // static:: est $this en static
+        $sql = "SELECT * FROM $table WHERE isbn LIKE :isbn OR title LIKE :title";
+        $query = Database::get()->prepare($sql);
+        $query->execute(['isbn' => $searchValue, 'title' => $searchValue]);
+
+        return $query->fetch();
     }
 }
 

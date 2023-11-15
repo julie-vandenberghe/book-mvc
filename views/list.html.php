@@ -1,6 +1,16 @@
 <?php require 'partials/header.html.php'; ?>
 
 <div class="max-w-5xl mx-auto">
+
+<?php if (isset($_SESSION['success'])) {?>
+<p class="bg-green-300 px-4 py-2 text-green-800 rounded-lg">
+    <?= $_SESSION['success']; unset($_SESSION['success']); ?>
+</p>
+
+    <?php
+}
+
+?>
     
     <div class="text-center my-10">
         <a href="/books/creer" class="bg-gray-900 px-4 py-2 text-white inline-block rounded hover:bg-gray-700 duration-200">Créer un nouveau livre</a>

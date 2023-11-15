@@ -81,6 +81,8 @@ class BookController
     {
         $book = Book::delete($id);
 
+        $_SESSION['success'] = "Le livre $id a été supprimé.";
+
         return View::redirect('/books');
     }
 
