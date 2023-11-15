@@ -26,7 +26,7 @@ class Book extends Model
                 'isbn' => '8248827583739',
                 'author' => 'Denise-Sabine Bernard',
                 'published_at' => '2014-08-18',
-                'image' => '../uploads/01.jpg',
+                'image' => 'uploads/01.jpg',
             ],
             [
                 'id' => 2,

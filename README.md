@@ -53,3 +53,6 @@ On pourra maintenant aller sur `http://localhost:8000`.
 ## TO DO
 - Rajouter fonctions pour formater price, isbn, year dans Book.php
 - Conséquence du todo du dessus : transformer function all() dans Model.php pour récupérer un tableau d'objets plutôt qu'un tableau de tableaux
+- Rajouter vérifications sur données envoyées dans formulaire dans BookController.php
+- Rajouter l'upload de l'image
+- Update
