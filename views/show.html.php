@@ -1,9 +1,4 @@
 <?php require 'partials/header.html.php'; ?>
-<div class="max-w-5xl mx-auto px-3">  
-    <h1 class="text-2xl font-bold">
-        <?= $book['title']; ?>
-    </h1>
-</div>
 <div class="max-w-5xl mx-auto px-3">
         <div class="lg:flex items-center">
             <div class="lg:w-1/2">

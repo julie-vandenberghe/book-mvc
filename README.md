@@ -49,3 +49,7 @@ On pourra maintenant aller sur `http://localhost:8000`.
 - Update : in progress 🚧
 - Search : in progress 🚧
 - Filter : not done ❌
+
+## TO DO
+- Rajouter fonctions pour formater price, isbn, year dans Book.php
+- Conséquence du todo du dessus : transformer function all() dans Model.php pour récupérer un tableau d'objets plutôt qu'un tableau de tableaux
